@@ -3,7 +3,6 @@
 // `cwc` -> same as `cwc site build-site`
 // `cwc some_site` -> also valid, `some_site` is compiled into `build-site`
 
-#include <locale.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
