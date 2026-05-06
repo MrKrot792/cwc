@@ -342,9 +342,9 @@ TemplateFile processTemplate(const char* template_path) {
     if (second == NULL) UNBALANCED_TEMPLATE_SYMBOL_ERROR(template_path);
 
     size_t length = second - first;
-    if (result.capacity <= result.length+1) {
-      result.capacity += 4;
-      result.tokens = realloc(result.tokens, result.capacity);
+    if (result.capacity == result.length+1) {
+      result.capacity *= 2;
+      result.tokens = realloc(result.tokens, result.capacity * sizeof(StringView));
     }
     result.tokens[result.length] = (StringView){.data = first, .size = length};
     result.length++;
