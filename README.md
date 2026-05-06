@@ -4,9 +4,6 @@ site templates to actual projects written in C. Everything is managed
 through source code, except something essential like site directory
 and output directory.
 
-I admit it, it's full of bugs and segfaults, but I wrote it overnight
-and I will fix it later.
-
 # How to build?
 `cwc` need meson, ninja and gcc to be built. Then you can build it
 like this:
